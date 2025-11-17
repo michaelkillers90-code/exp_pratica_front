@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ONG Patinhas Unidas - Dedicado a cuidar e proteger animais abandonados">
+    <meta name="keywords" content="adoção de animais, voluntariado, doações, cães e gatos, ONG Patinhas Unidas">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <title>ONG Patinhas Unidas | Cuidando de Animais Abandonados</title>
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Menu principal">
+            <img src="assets/images/logoPatinhas.png" alt="logo Patinhas Unidas" class="logo">
+            <ul>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>ONG Patinhas Unidas</h1>
+            <p>A ONG <strong>Patinhas Unidas</strong> é uma organização sem fins lucrativos dedicada a cuidar e proteger
+                de animais em estado de abandono.
+                Nossa Missão é proporcionar um lar seguro e amoroso para esses animais, promovendo a adoção responsável
+                e conscientizando a comunidade sobre a importância do cuidado animal.
+            </p>
+            <img src="assets/images/resgate-ong.avif" alt="Voluntários resgatando um cachorro abandonado."
+                class="img_central">
+        </section>
+
+        <section id="ong_values">
+            <article>
+                <h2>Missão</h2>
+                <p>Promover o bem-estar do animal por meio de resgate, reabilitação e adoção consciente.</p>
+            </article>
+
+            <article>
+                <h2>Visão</h2>
+                <p>Ser referência em proteção animal e conscientização sobre abandono e maus-tratos</p>
+            </article>
+
+            <article>
+                <h2>Valores</h2>
+                <ul>
+                    <li>Amor e respeito aos animais</li>
+                    <li>Transparência e ética</li>
+                    <li>Responsabilidade social</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="contacts">
+            <h2>Contatos</h2>
+            <address>
+                <p>Email: <a href="mailto: contato@patinhasunidas.org.br">contato@patinhasunidas.org.br</a></p>
+                <p>Telefone: (61) 98877 5543</p>
+                <p>Endereço: Rua dos animais felizes, Planaltina-DF</p>
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ONG Patinhas Unidas. Todos os direitos reservados</p>
+    </footer>
+    <button id="btnTop" title="Voltar ao topo">↑</button>
+    
+    <script>
+    // Mostrar ou ocultar o botão ao rolar a página
+    const btnTop = document.getElementById("btnTop");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            btnTop.style.display = "block";
+        } else {
+            btnTop.style.display = "none";
+        }
+    };
+
+    // Voltar suavemente ao topo ao clicar
+    btnTop.addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #ff6f61;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* CABEÇALHO E MENU DE NAVEGAÇÃO */
+
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+}
+
+nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 120px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ff6f61;
+}
+
+/* SEÇÕES PRINCIPAIS */
+
+main {
+  width: 1100px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+/* CLASSE ABOUT */
+
+#about {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+#about h1 {
+  font-size: 32px;
+  color: #e65100;
+  margin-bottom: 16px;
+}
+
+#about p {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.img_central {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+}
+
+#ong_values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+#ong_values article {
+  flex: 1 1 300px;
+  background-color: #fff3e0;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#ong_values h2 {
+  text-align: center;
+  color: #e65100;
+  margin-bottom: 8px;
+}
+
+/* CONTATOS */
+
+#contacts {
+  text-align: center;
+  background-color: #ffe0b2;
+  border-radius: 8px;
+  padding: 32px 16px;
+}
+
+#contacts h2 {
+  color: #e65100;
+  margin-bottom: 16px;
+}
+
+/* RODAPÉ */
+
+footer {
+  background-color: #ffb74d;
+  text-align: center;
+  padding: 16px;
+  color: #333;
+  font-size: 14px;
+  margin-top: 48px;
+}
+
+/* ================================
+   BOTÃO VOLTAR AO TOPO
+================================= */
+#btnTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #e65100;
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#btnTop:hover {
+  background-color: #ff9800;
+  transform: scale(1.1);
+}
+
+/* SEÇÃO DE PROJETOS */
+
+#projects {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+#projects h1 {
+  font-size: 32px;
+  color: #e65100;
+  margin-bottom: 16px;
+}
+
+/* ESTILO DOS ARTIGOS DE PROJETOS */
+
+#projects article {
+  background-color: #fff3e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  max-width: 900px;
+  opacity: 0;
+  /* começa invisível */
+  transform: translateY(40px);
+  /* começa levemente abaixo */
+  animation: fadeInUp 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ANIMAÇÃO DE ENTRADA SUAVE */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* DELAY PROGRESSIVO PARA CADA ARTIGO */
+#projects article:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+#projects article:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+#projects article:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+#projects article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGENS DOS PROJETOS */
+
+#projects article img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+/* TÍTULOS DOS PROJETOS */
+
+#projects article h2 {
+  color: #e65100;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#projects article p {
+  color: #444;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+/* BOTÕES DOS PROJETOS */
+
+.button {
+  display: inline-block;
+  background-color: #e65100;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: #ff9800;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  #ong_values {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 90px;
+  }
+}
+
+/* ================================
+   RESPONSIVIDADE - PROJETOS
+================================= */
+@media (max-width: 768px) {
+  #projects {
+    gap: 32px;
+  }
+
+  #projects article img {
+    height: 200px;
+  }
+
+  #projects article h2 {
+    font-size: 20px;
+  }
+
+  #projects article p {
+    font-size: 15px;
+  }
+}
+
+/* ================================
+   SEÇÃO DE CADASTRO
+================================= */
+#register {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff3e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#register h1 {
+    text-align: center;
+    color: #e65100;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+/* Mensagem de sucesso */
+.msg-sucesso {
+    background-color: #c8e6c9;
+    color: #256029;
+    border: 1px solid #81c784;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Campos e fieldsets */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+fieldset {
+    border: 2px solid #ffb74d;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    animation: fadeInUp 0.8s ease both;
+}
+
+fieldset legend {
+    color: #e65100;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: #e65100;
+    box-shadow: 0 0 4px rgba(230, 81, 0, 0.4);
+    outline: none;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #e65100; /* cor personalizada do radio */
+}
+
+fieldset label[for="tipo"],
+fieldset label input[type="radio"] {
+    display: inline-block;
+}
+
+/* Botão de envio */
+.button-enviar {
+    background-color: #e65100;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-enviar:hover {
+    background-color: #ff9800;
+    transform: scale(1.05);
+}
+
+/* ================================
+   ANIMAÇÃO DE ENTRADA (REUTILIZADA)
+================================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   RESPONSIVIDADE - CADASTRO
+================================= */
+@media (max-width: 768px) {
+    #register {
+        margin: 20px;
+        padding: 16px;
+    }
+
+    #register h1 {
+        font-size: 22px;
+    }
+
+    fieldset {
+        padding: 16px;
+    }
+
+    input,
+    select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .button-enviar {
+        width: 100%;
+    }
+}
+
+/* ================================
+   ANIMAÇÃO DA MENSAGEM DE SUCESSO
+================================= */
+.msg-sucesso.show {
+    display: block;
+    animation: fadeInOut 3s ease forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
